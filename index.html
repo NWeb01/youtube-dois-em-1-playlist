@@ -39,10 +39,14 @@
             'endSeconds': playList[currentId].end
         });
         var playerElement = document.getElementById("video-youtube");
-        var requestFullScreen = playerElement.requestFullScreen || playerElement.mozRequestFullScreen || playerElement.webkitRequestFullScreen;
-        console.log(requestFullScreen);
-        if (requestFullScreen) {
-          requestFullScreen.bind(playerElement)();
+        if(playerElement.webkitEnterFullScreen) {
+            
+        } else {
+          var requestFullScreen = playerElement.requestFullScreen || playerElement.mozRequestFullScreen || playerElement.webkitRequestFullScreen;
+          console.log(requestFullScreen);
+          if (requestFullScreen) {
+            requestFullScreen.bind(playerElement)();
+          }
         }
         
     });
