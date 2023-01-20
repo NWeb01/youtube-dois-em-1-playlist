@@ -40,7 +40,7 @@
         });
         var playerElement = document.getElementById("video-youtube");
         if(playerElement.webkitEnterFullScreen) {
-            
+            playerElement.webkitEnterFullScreen();
         } else {
           var requestFullScreen = playerElement.requestFullScreen || playerElement.mozRequestFullScreen || playerElement.webkitRequestFullScreen;
           console.log(requestFullScreen);
