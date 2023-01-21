@@ -1,21 +1,24 @@
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 <body>
 <br>
 <div id="video-youtube"></div>
 <br>
-<textarea id="playlist-object" rows="20" cols="70">
+<textarea id="playlist-object" rows="20" cols="180">
 </textarea>
 <br>
 <button id="update-button">Update and Play from beginning</button>
 
 <script id="youtube-tracking-script">
 
-    var playList = [{"song": "One Sweet World", "videoId":"glPoySiB548","start":604,"end":890},
+    var playList = [
+        {"song": "Best of what's around", "videoId": "NrubHPRf65s", "start": 21, "end": 419},
+        {"song": "One Sweet World", "videoId":"glPoySiB548","start":604,"end":890},
 {"song": "So Much to Say", "videoId":"glPoySiB548","start":955,"end":1290},
 {"song": "Tripping Billies", "videoId":"QVA-JAT7src","start":9532,"end":9867},
 {"song": "Warehouse", "videoId":"QVA-JAT7src","start":8342,"end":8852},
-{"song": "Minarets", "videoId":"QVA-JAT7src","start":886,"end":1240}];
+{"song": "Minarets", "videoId":"QVA-JAT7src","start":886,"end":1240}
+    ];
 
     var textarea = document.getElementById('playlist-object');
     textarea.value = JSON.stringify(playList);
