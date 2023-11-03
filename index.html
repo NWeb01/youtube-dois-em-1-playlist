@@ -1,10 +1,10 @@
 <html>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 <body>
-<a href="https://github.com/cytsunny/youtube-playlist/">Github Repository</a>
 <br>
 <div id="video-youtube"></div>
 <br>
-<textarea id="playlist-object" rows="20" cols="70">
+<textarea id="playlist-object" rows="20" cols="180">
 </textarea>
 <br>
 <button id="update-button">Update and Play from beginning</button>
@@ -12,26 +12,15 @@
 <script id="youtube-tracking-script">
 
     var playList = [
-        {
-            videoId: 'dBK0gKW61NU',
-            start: 222,
-            end: 224
-        },
-        {
-            videoId: 'LtCfuHLrixY',
-            start: 210,
-            end: 213
-        },
-        {
-            videoId: 'pU_nCvEq_Y4',
-            start: 18526,
-            end: 18529
-        },
-        {
-            videoId: 'EHpxi7khHb0',
-            start: 3008,
-            end: 3010
-        }
+        {"song": "Satellite (skip intro)", "videoId": "VptAj8_s9go", "start": 6194, "end": 6477 },
+        {"song": "Cry Freedom", "videoId": "VptAj8_s9go", "start": 9673, "end": 10014},
+        {"song": "Best of what's around", "videoId": "NrubHPRf65s", "start": 21, "end": 419},
+        {"song": "Warehouse", "videoId":"QVA-JAT7src","start":8342,"end":8852},
+        {"song": "Tripping Billies", "videoId":"QVA-JAT7src","start":9532,"end":9867},
+        {"song": "So Much to Say", "videoId":"glPoySiB548","start":955,"end":1290},
+        {"song": "One Sweet World", "videoId":"glPoySiB548","start":604,"end":890},
+        {"song": "Minarets", "videoId":"QVA-JAT7src","start":886,"end":1240},
+        {"song": "Satellite (offkey intro)", "videoId": "VptAj8_s9go", "start": 6059, "end": 6477 },
     ];
 
     var textarea = document.getElementById('playlist-object');
@@ -55,6 +44,17 @@
             'startSeconds': playList[currentId].start,
             'endSeconds': playList[currentId].end
         });
+        var playerElement = document.getElementById("video-youtube");
+        if(playerElement.webkitEnterFullScreen) {
+            playerElement.webkitEnterFullScreen();
+        } else {
+          var requestFullScreen = playerElement.requestFullScreen || playerElement.mozRequestFullScreen || playerElement.webkitRequestFullScreen;
+          console.log(requestFullScreen);
+          if (requestFullScreen) {
+            requestFullScreen.bind(playerElement)();
+          }
+        }
+        
     });
 
     
