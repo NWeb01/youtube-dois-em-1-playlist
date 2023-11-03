@@ -4,7 +4,7 @@ Long long time ago, one is able to set start time and end time when adding a vid
 
 [Link to the original playlist tool](https://cytsunny.github.io/youtube-playlist/)
 
-[Link to my playlist tool](https://jhedlund.github.io/youtube-playlist/)
+[Link to my playlist tool](https://nweb01.github.io/youtube-dois-em-1-playlist/)
 
 ## But why would this function be needed?
 The reason I want this function back is because I want to play the singing part of karaoke stream of Vtubers. Currently you can only download the full streaming video, cut out the section you want to play and upload it as new video. Not only it is time consuming, it is stealing view count from the Vtuber who actually sing that song. I feel that if I am listening to a Vtuber's singing plaback, the view count should go to the original creator.
