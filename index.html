@@ -1,10 +1,13 @@
 <html>
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+<head>
+<title>Dois em 1 - Excerpts Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
 <body>
 <br>
 <div id="video-youtube"></div>
 <br>
-<textarea id="playlist-object" rows="20" cols="180">
+<textarea id="playlist-object" rows="20" cols="150">
 </textarea>
 <br>
 <button id="update-button">Update and Play from beginning</button>
@@ -12,15 +15,9 @@
 <script id="youtube-tracking-script">
 
     var playList = [
-        {"song": "Satellite (skip intro)", "videoId": "VptAj8_s9go", "start": 6194, "end": 6477 },
-        {"song": "Cry Freedom", "videoId": "VptAj8_s9go", "start": 9673, "end": 10014},
-        {"song": "Best of what's around", "videoId": "NrubHPRf65s", "start": 21, "end": 419},
-        {"song": "Warehouse", "videoId":"QVA-JAT7src","start":8342,"end":8852},
-        {"song": "Tripping Billies", "videoId":"QVA-JAT7src","start":9532,"end":9867},
-        {"song": "So Much to Say", "videoId":"glPoySiB548","start":955,"end":1290},
-        {"song": "One Sweet World", "videoId":"glPoySiB548","start":604,"end":890},
-        {"song": "Minarets", "videoId":"QVA-JAT7src","start":886,"end":1240},
-        {"song": "Satellite (offkey intro)", "videoId": "VptAj8_s9go", "start": 6059, "end": 6477 },
+        {"episode": 16, "videoId": "Iy0KM3ZQCzk", "start": 6194, "end": 6477 },
+        {"episode": 15, "videoId": "GiqfiLNc0IU", "start": 9673, "end": 10014},
+        {"episode": 14, "videoId": "78B9Yk6Yas0", "start": 21, "end": 419},
     ];
 
     var textarea = document.getElementById('playlist-object');
@@ -29,6 +26,7 @@
     var currentId = 0;
 
     var updateButton = document.getElementById('update-button');
+    
     updateButton.addEventListener('click', function(event) {
         var playListString = document.getElementById('playlist-object').value;
         try {
